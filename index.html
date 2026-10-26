@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Workspace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <section class="task-section">
+            <div class="game-box">
+                <div class="stats-panel">
+                    <p>Hero HP: <span id="hero-hp">100</span></p>
+                    <p>Enemy HP: <span id="enemy-hp">100</span></p>
+                    <p>Heals Left: <span id="heals-left">3</span></p>
+                </div>
+                <div class="controls">
+                    <button id="btn-attack">Attack</button>
+                    <button id="btn-defend">Defend</button>
+                    <button id="btn-heal">Heal</button>
+                    <button id="btn-restart">Restart</button>
+                </div>
+                <div id="game-log" class="log-box"></div>
+            </div>
+        </section>
+
+        <section class="task-section">
+            <div class="kanban-wrapper">
+                <div class="progress-container">
+                    <span>Progress: </span>
+                    <div class="progress-bar-bg">
+                        <div id="progress-bar-fill">0%</div>
+                    </div>
+                </div>
+                <div class="kanban-board">
+                    <div class="kanban-column">
+                        <h3>To Do</h3>
+                        <div id="todo-cards" class="card-list"></div>
+                    </div>
+                    <div class="kanban-column">
+                        <h3>In Progress</h3>
+                        <div id="inprogress-cards" class="card-list"></div>
+                    </div>
+                    <div class="kanban-column">
+                        <h3>Done</h3>
+                        <div id="done-cards" class="card-list"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="task-section">
+            <form id="character-form" novalidate>
+                <div id="error-summary" class="error-summary" aria-live="polite"></div>
+                
+                <div class="form-group">
+                    <label for="char-name">Character Name:</label>
+                    <input type="text" id="char-name" required>
+                    <span id="char-name-error" class="error-msg"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="char-class">Class:</label>
+                    <select id="char-class">
+                        <option value="Warrior">Warrior</option>
+                        <option value="Mage">Mage</option>
+                        <option value="Rogue">Rogue</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <p>Skill Points Left: <span id="points-left">20</span> / 20</p>
+                    
+                    <label for="skill-strength">Strength:</label>
+                    <input type="number" id="skill-strength" class="skill-input" value="5" min="1" max="10">
+                    <span id="skill-strength-error" class="error-msg"></span>
+
+                    <label for="skill-magic">Magic:</label>
+                    <input type="number" id="skill-magic" class="skill-input" value="5" min="1" max="10">
+                    <span id="skill-magic-error" class="error-msg"></span>
+
+                    <label for="skill-agility">Agility:</label>
+                    <input type="number" id="skill-agility" class="skill-input" value="5" min="1" max="10">
+                    <span id="skill-agility-error" class="error-msg"></span>
+
+                    <label for="skill-defense">Defense:</label>
+                    <input type="number" id="skill-defense" class="skill-input" value="5" min="1" max="10">
+                    <span id="skill-defense-error" class="error-msg"></span>
+                </div>
+
+                <button type="submit">Create Character</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="task1.js" defer></script>
+    <script src="task2.js" defer></script>
+    <script src="task3.js" defer></script>
+</body>
+</html>
